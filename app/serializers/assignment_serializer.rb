@@ -3,7 +3,7 @@ class AssignmentSerializer < ActiveModel::Serializer
 
   belongs_to :section
   # belongs_to :teacher
-  has_many :grades
+  has_many :grades, dependent: :destroy
   # has_many :students, through: :grades
 
   def grades

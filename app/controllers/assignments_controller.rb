@@ -36,10 +36,11 @@ class AssignmentsController < ApplicationController
     end
 
     def destroy
+        
         assignment = Assignment.find(params[:id])
         assignment.destroy
 
-        render json: "assignment deleted"
+        render json: {message: "assignment deleted" }
     end
     private
 
