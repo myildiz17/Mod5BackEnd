@@ -2,6 +2,7 @@ class StudentsController < ApplicationController
     def index 
         
         students = Student.all
+        # students = Student.all.order("lastname ASC")
         render json: students
     end
 
